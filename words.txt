@@ -1,3 +1,4 @@
+amber
 azure
 cyber
 ethereal
@@ -6,12 +7,14 @@ eclipse
 ectoplasm
 ephemeral
 equinox
+goji
 haven
 hex
 kinetic
 lexicon
 malignant
 malice
+nebula
 nova
 parallax
 penumbra
@@ -19,7 +22,7 @@ peridot
 phoenix
 prism
 quantum
-nebula
+refraction
 sanguine
 solace
 solstice
