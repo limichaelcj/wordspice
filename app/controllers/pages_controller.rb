@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @word = strong_params[:word]
     if @word
-      data = ApplicationHelper.call_datamuse(@word)
+      data = ApiCall.datamuse(@word)
       if data[0]
         @result = data[0]["word"] == @word ? data[0]["word"] : nil
       end
