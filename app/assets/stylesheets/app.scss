@@ -1,0 +1,14 @@
+// import order is IMPORTANT
+
+// css imports
+@import 'config/imports';
+// sass variables
+@import 'config/variables';
+@import 'config/logic';
+@import 'config/theme';
+// base settings
+@import 'config/global';
+
+// styles
+@import 'layouts/index';
+@import 'components/index';

@@ -1,6 +1,9 @@
 {
   "name": "wordspice",
   "private": true,
+  "scripts": {
+    "sass": "sass app/assets/stylesheets/app.scss app/assets/stylesheets/app.css"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5"
   },

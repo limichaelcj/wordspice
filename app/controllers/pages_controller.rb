@@ -3,10 +3,12 @@ class PagesController < ApplicationController
     @word = strong_params[:word]
     if @word
       data = ApplicationHelper.call_datamuse(@word)
-      @result = data[0] ? data[0]["word"] : nil
+      if data[0]
+        @result = data[0]["word"] == @word ? data[0]["word"] : nil
+      end
     end
     if !@result
-      @result = "Word not found"
+      @result = "Word not found in dictionary"
     end
   end
 

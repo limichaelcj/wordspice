@@ -1,1 +1,12 @@
-<%= @result %>
+
+<div class="brand">word spice</div>
+
+<form action="/" method="get">
+  <label for="word">Word: </label>
+  <input name="word" type="text" id="word" />
+  <input type="submit">
+</form>
+
+<div class="margin">
+  <div><strong>Result: </strong> <%= @result %></div>
+</div>
