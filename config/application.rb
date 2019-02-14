@@ -16,6 +16,6 @@ module Wordspice
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # load paths of modules, etc.
+    config.eager_load_paths << "#{config.root}/lib"
   end
 end
