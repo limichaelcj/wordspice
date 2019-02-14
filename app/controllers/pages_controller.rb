@@ -2,14 +2,9 @@ class PagesController < ApplicationController
   def home
     @word = strong_params[:word]
     if @word
-      data = Api::Datamuse.search(@word)
-      if data[0]
-        @result = data[0]["word"] == @word ? data[0]["word"] : nil
-      end
+      @word_exists = Api::Datamuse.search(@word)
     end
-    if !@result
-      @result = "Word not found in dictionary"
-    end
+    @result = @word_exists ? "'#{@word}' found!" : "'#{@word}' not found" 
   end
 
   private
