@@ -1,4 +1,4 @@
-class Association < ApplicationRecord
+class Link < ApplicationRecord
   belongs_to :user
   belongs_to :tag
   belongs_to :word

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tags
-  has_many :associations
+  has_many :links
   has_many :votes
-  has_many :endorsements, through: :votes, source: :association
+  has_many :endorsements, through: :votes, source: :link
 end

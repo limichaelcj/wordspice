@@ -1,5 +1,5 @@
 class Word < ApplicationRecord
-  has_many :associations
-  has_many :tags, through: :associations
-  has_many :endorsements, through: :associations, source: :vote
+  has_many :links
+  has_many :tags, through: :links
+  has_many :endorsements, through: :links, source: :vote
 end

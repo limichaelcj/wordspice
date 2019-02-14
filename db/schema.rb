@@ -15,15 +15,15 @@ ActiveRecord::Schema.define(version: 2019_02_14_040006) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "associations", force: :cascade do |t|
+  create_table "links", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "tag_id"
     t.bigint "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tag_id"], name: "index_associations_on_tag_id"
-    t.index ["user_id"], name: "index_associations_on_user_id"
-    t.index ["word_id"], name: "index_associations_on_word_id"
+    t.index ["tag_id"], name: "index_links_on_tag_id"
+    t.index ["user_id"], name: "index_links_on_user_id"
+    t.index ["word_id"], name: "index_links_on_word_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -50,10 +50,10 @@ ActiveRecord::Schema.define(version: 2019_02_14_040006) do
 
   create_table "votes", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "association_id"
+    t.bigint "link_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["association_id"], name: "index_votes_on_association_id"
+    t.index ["link_id"], name: "index_votes_on_link_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
@@ -63,10 +63,10 @@ ActiveRecord::Schema.define(version: 2019_02_14_040006) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "associations", "tags"
-  add_foreign_key "associations", "users"
-  add_foreign_key "associations", "words"
+  add_foreign_key "links", "tags"
+  add_foreign_key "links", "users"
+  add_foreign_key "links", "words"
   add_foreign_key "tags", "users"
-  add_foreign_key "votes", "associations"
+  add_foreign_key "votes", "links"
   add_foreign_key "votes", "users"
 end
