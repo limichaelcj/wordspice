@@ -1,8 +1,41 @@
 // sass mixins, functions, logic
 
+// flex, containers
+
 @mixin flex($dir: row, $justify: flex-start, $align: flex-start){
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin fit-window($type: scroll) {
+  width: 100vw;
+  @if $type == fixed {
+    height: 100vh;
+  } @else {
+    min-height: 100vh;
+  }
+}
+
+@mixin fit-parent {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin confine-parent {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+// relative spacing
+
+@mixin pad($degree) {
+  padding: 1rem * $degree;
+}
+@mixin pad-wide($degree) {
+  padding: (1rem * $degree) (1.5rem * $degree);
+}
+@mixin margin($degree) {
+  margin: 1rem * $degree;
 }

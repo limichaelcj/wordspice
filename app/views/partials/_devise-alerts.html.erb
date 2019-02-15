@@ -1,0 +1,20 @@
+<% if ( notice || alert ) %>
+  <div class="devise-alert-container">
+    <% if notice %>
+      <div class="devise-notice">
+        <div class="devise-notice"<%= notice %></div>
+        <button
+          class="devise-x"
+          data-target="devise-notice"
+          onclick=""
+        ></button>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="devise-alert">
+        <div class="devise-alert"<%= alert %></div>
+        <button class="devise-x" data-target="devise-notice"></button>
+      </div>
+    <% end %>
+  </div>
+<% end %>

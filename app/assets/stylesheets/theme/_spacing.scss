@@ -1,0 +1,23 @@
+.margin-yx {
+  margin: 1rem 0;
+}
+
+.margin-ym {
+  margin: 2rem 0;
+}
+
+.margin-yl {
+  margin: 4rem 0;
+}
+
+@for $i from 1 through 5 {
+  .pad-#{$i} {
+    @include pad($i);
+  }
+}
+
+@for $i from 1 through 5 {
+  .pad-w#{$i} {
+    @include pad-wide($i);
+  }
+}

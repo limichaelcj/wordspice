@@ -1,0 +1,22 @@
+.devise-alert-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  font-size: $fsize-default;
+  z-index: 2;
+  [class^="devise"] {
+    display: block;
+    height: 3em;
+    padding: auto;
+  }
+  .devise-alert {
+    background-color: $red;
+    color: $red-dark;
+  }
+  .devise-notice {
+    background-color: $cyan;
+    color: $cyan-dark;
+  }
+}
